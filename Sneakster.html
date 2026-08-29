@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>The Sneakster</h1>
+						<p>A game about being hidden</p>
+					</header>
+					<ul class="actions special">
+						<li><a href="index.html" class="button">Back</a></li>
+					</ul>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images\longimgSnmeakers.png" alt="" /></span>
+								<ul class="actions special">
+									<li><a href="index.html" class="button">Link To Page</a></li>
+								</ul>
+								<h2>Description</h2>
+								<p>A short Game Jam game following one of the two themes: Hidden<br>
+									I used Unity 6 and wrote in C#,<br> 
+									Made art using Aesprite, and used online sound generators to make any sound effects. Music was done by importing a song made through the game Offbeat which I had creative lincense for (The game and devs allow all songs made using Offbeat to be used for whatever purpose its really cool)<br>
+									Game uses static, rotating, and moving enemies with a dynamic mesh to represent L.O.S<br>
+									The player has to move around precisely and activate switches to make it to the end of the level.
+								</p>
+								<h2>Retro</h2>
+								<p>The game was pretty fun to work on but hard when I had a few hours after work to work on it.<br>
+									The FOV effect uses a procedually made mesh which updates base on if it hits an object tagged wall or not. The update goes by raycasting from the forwards direction then rotating a set angular amount before doing it again. If there isnt a hit, the next vertext of the mesh is at the max distance of the raycast. If the raycast hit a wall the point is at the collision point between the raycast and the wall.<br>
+									Making the mesh move was slightly difficult mainly as if mesh is rotated the FoV becomes unstable as it is still trying to use the original starting spot. Moving had a similar problem with not moving but that was due to forgetting to set the origin to the current position.<br>
+									The rest of my code was simple as it was reused ideas. Interacting with levers were done by having a raycast around the player detecting any interaction objects. These objects stored data within them and were apart of a Interactable Object base class which. Once detected if the player presses the interact button it tells the closes interactable object (done as to handle multiple interactable objects in close proximity) to run its interaction code which does whatever effect is wanted, in this case open and close a linked door.
+								</p>
+							</section>
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Contact Me</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>43 Arcadian Trail &bull; Monroe, NY 10950 &bull; USA</dd>
+								<dt>Shipping</dt>
+								<dd>PO Box 87 &bull; Blooming Grove, NY 10914 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(845) 645-3154</dd>
+								<dt>Email</dt>
+								<dd><a href="#">nicolas.k.delbue@gmail.com</a></dd>
+								<dt>Resume</dt>
+								<dd><a href="doc/resume/NickD Resume 2026-2027.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
